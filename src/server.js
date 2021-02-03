@@ -2,7 +2,11 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.json());
 
+const myFunction = (req, res, next) => {
+    console.log("this happens first")
+}
 
 app.get("/", (req, res) => {
     console.log("test123");
